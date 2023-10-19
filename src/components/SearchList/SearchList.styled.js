@@ -8,6 +8,7 @@ export const SearchListStyled = styled.ul`
   row-gap: 48px;
   height: 100%;
   justify-content: center;
+  margin-bottom: 30px;
   & li {
     display: flex;
     flex-direction: column;

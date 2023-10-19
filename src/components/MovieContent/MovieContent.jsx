@@ -32,7 +32,7 @@ const MovieContent = ({
           </h2>
           <p>
             <span>User Score: </span>
-            {Number(vote_average).toFixed(2) * 10}%
+            {Number(vote_average).toFixed(1) * 10}%
           </p>
           <p>
             <span>Overview: </span> {overview}

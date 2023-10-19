@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+
 export const TrendingTodayList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
+  margin-bottom: 30px;
   & li {
     display: flex;
     flex-direction: column;
