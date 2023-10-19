@@ -13,12 +13,13 @@ function TrendingList() {
       try {
         const data = await getTrendingMovies();
         setMovies(data);
+        return;
       } catch (error) {
         console.log(error);
       }
     };
     trendingMovie();
-  }, [movies]);
+  }, []);
   return (
     <>
       <main>
