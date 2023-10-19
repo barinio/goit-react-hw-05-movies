@@ -8,17 +8,17 @@ function TrendingList() {
   const [movies, setMovies] = useState([]);
 
   const location = useLocation();
-  useEffect(
-    () => async () => {
+  useEffect(() => {
+    const trendingMovie = async () => {
       try {
         const data = await getTrendingMovies();
         setMovies(data);
       } catch (error) {
         console.log(error);
       }
-    },
-    [movies]
-  );
+    };
+    trendingMovie();
+  }, [movies]);
   return (
     <>
       <main>
