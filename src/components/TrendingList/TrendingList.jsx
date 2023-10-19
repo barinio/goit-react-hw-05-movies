@@ -22,7 +22,6 @@ function TrendingList() {
   }, []);
   return (
     <>
-      <main>
         <div className="container">
           <Title>Trending today</Title>
           <TrendingTodayList>
@@ -45,7 +44,6 @@ function TrendingList() {
             ))}
           </TrendingTodayList>
         </div>
-      </main>
     </>
   );
 }
