@@ -1,3 +1,6 @@
+import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
+
 import { defaultImg } from 'services/imgDefault';
 import {
   ListAdditional,
@@ -7,8 +10,6 @@ import {
   InfoSection,
   LinkAdditional,
 } from './MovieContent.styled';
-import { Suspense } from 'react';
-import { Outlet } from 'react-router-dom';
 
 const MovieContent = ({
   data: { title, poster_path, vote_average, overview, genres, release_date },

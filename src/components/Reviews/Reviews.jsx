@@ -1,12 +1,14 @@
-import NotInfo from 'components/NotInfo/NotInfo';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+
 import { getReviews } from 'services/api';
 import { ListReviews } from './Reviews.styled';
+import NotInfo from 'components/NotInfo/NotInfo';
 
 const Reviews = () => {
   const { movieId } = useParams();
   const [reviews, setReviews] = useState([]);
+
   useEffect(() => {
     const castInfo = async () => {
       try {
@@ -18,6 +20,7 @@ const Reviews = () => {
     };
     castInfo();
   }, [movieId]);
+
   return (
     <>
       <ListReviews>

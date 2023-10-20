@@ -1,5 +1,6 @@
-import TrendingList from 'components/TrendingList/TrendingList';
 import { Suspense } from 'react';
+
+import TrendingList from 'components/TrendingList/TrendingList';
 
 const Home = () => {
   return (

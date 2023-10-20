@@ -1,13 +1,13 @@
-import MovieContent from 'components/MovieContent/MovieContent';
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useParams } from 'react-router-dom';
+
+import MovieContent from 'components/MovieContent/MovieContent';
 import { getMovieById } from 'services/api';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
   const { state } = useLocation();
   const backLinkRef = useRef(state?.from ?? '/');
-
   const [data, setMovieInfo] = useState([]);
 
   useEffect(() => {
