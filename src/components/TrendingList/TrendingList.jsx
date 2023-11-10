@@ -3,7 +3,7 @@ import { useLocation, useSearchParams } from 'react-router-dom';
 
 import { getTrendingMovies } from 'services/api';
 import { defaultImg } from 'services/imgDefault';
-import { MovieLink, Title, TrendingTodayList } from './TrendingList.styled';
+import { MovieLink, Title, MoviesList } from './TrendingList.styled';
 import Pagination from 'components/Pagination/Pagination';
 
 function TrendingList() {
@@ -34,7 +34,7 @@ function TrendingList() {
     <>
       <div className="container">
         <Title>Trending today</Title>
-        <TrendingTodayList>
+        <MoviesList>
           {trendsMovies.results?.map(({ id, poster_path, title }) => (
             <li key={id}>
               <MovieLink to={`movies/${id}`} state={{ from: location }}>
@@ -52,7 +52,7 @@ function TrendingList() {
               </MovieLink>
             </li>
           ))}
-        </TrendingTodayList>
+        </MoviesList>
         {trendsMovies.length !== 0 && page <= totalPages && !error && (
           <Pagination totalPages={totalPages} page={page} setPage={setPage} />
         )}

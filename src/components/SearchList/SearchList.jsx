@@ -2,15 +2,15 @@ import { useLocation } from 'react-router-dom';
 
 import NotInfo from 'components/NotInfo/NotInfo';
 import { defaultImg } from 'services/imgDefault';
-import { MovieLink, SearchListStyled } from './SearchList.styled';
+import { MovieLink } from './SearchList.styled';
+import { MoviesList } from 'components/TrendingList/TrendingList.styled';
 
 const SearchList = ({ searchResult: { results } }) => {
   const location = useLocation();
-
   return (
     <>
       <div className="container">
-        <SearchListStyled>
+        <MoviesList>
           {results?.length > 0 ? (
             results.map(({ id, poster_path, title }) => (
               <li key={id}>
@@ -32,7 +32,7 @@ const SearchList = ({ searchResult: { results } }) => {
           ) : (
             <NotInfo />
           )}
-        </SearchListStyled>
+        </MoviesList>
       </div>
     </>
   );

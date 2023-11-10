@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const PaginationContainer = styled.div`
-  margin: 50px auto;
-
+  margin: 25px auto;
+  @media (min-width: 500px) {
+    margin: 50px auto;
+  }
   .pagination {
     display: flex;
     align-items: center;
@@ -10,16 +12,23 @@ export const PaginationContainer = styled.div`
     list-style: none;
     outline: none;
     height: 42px;
-    gap: 5px;
+    gap: 3px;
+    @media (min-width: 500px) {
+      gap: 5px;
+    }
   }
 
   .pagination > li > a {
     border: 1px solid #fff;
-    padding: 7px 15px;
+    padding: 2px 7px;
     outline: none;
-    cursor: pointer;
     transition: all 250ms ease-out;
     border-radius: 50%;
+    cursor: pointer;
+
+    @media (min-width: 500px) {
+      padding: 7px 15px;
+    }
     &:is(:hover, :focus) {
       background-color: #ffffffc5;
       border-color: #ffffffc5;
@@ -36,8 +45,7 @@ export const PaginationContainer = styled.div`
     transform: scale(1.1);
   }
 
-  .pagination > li > a,
-  .pagination > li > span {
+  .pagination > li > a {
     color: #c8c8c8;
   }
 `;

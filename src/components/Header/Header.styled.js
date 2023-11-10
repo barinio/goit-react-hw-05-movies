@@ -7,8 +7,11 @@ export const HeaderBox = styled.header`
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   & nav {
-    width: 350px;
+    width: 320px;
     margin: auto;
+    @media (max-width: 370px) {
+      width: 0;
+    }
   }
 `;
 export const NavList = styled.ul`
